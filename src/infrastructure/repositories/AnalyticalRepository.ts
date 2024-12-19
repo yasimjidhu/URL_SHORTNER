@@ -9,6 +9,7 @@ export class AnalyticsRepository implements IAnalyticsRepository {
         const newAnalyticsData = new AnalyticsData({
             userId:analytics.userId,
             alias: analytics.alias,
+            topic:analytics.topic,
             totalClicks: analytics.totalClicks,
             uniqueClicks: analytics.uniqueClicks,
             clicksByDate: analytics.clicksByDate,

@@ -2,6 +2,7 @@ export class Analytics {
   constructor(
     public userId:string,
     public alias: string,
+    public topic:string,
     public totalClicks: number,
     public uniqueClicks: number,
     public clicksByDate: Array<{ date: string; count: number }>,

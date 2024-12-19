@@ -74,6 +74,7 @@ export class UrlRepository implements IUrlRepository {
       return new Analytics(
         analyticsDoc.userId,
         analyticsDoc.alias,
+        analyticsDoc.topic,
         analyticsDoc.totalClicks,
         analyticsDoc.uniqueClicks,
         analyticsDoc.clicksByDate,

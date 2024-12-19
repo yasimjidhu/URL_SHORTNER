@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    environment:
+      - REDIS_URL=redis://:AW2CAAIjcDEwZWI3N2EyNzhjZGE0ZmE2OTgzMzg4ZWRlMzUwYjA4YXAxMA@kind-possum-28034.upstash.io:6379
+    depends_on:
+      - redis
+  redis:
+    image: redis:latest
+    ports:
+      - "6379:6379"

@@ -21,6 +21,7 @@ export class AnalyticsRepository implements IAnalyticsRepository {
         return new Analytics(
             savedData.userId,
             savedData.alias,
+            savedData.topic,
             savedData.totalClicks,
             savedData.uniqueClicks,
             savedData.clicksByDate,
@@ -136,6 +137,7 @@ export class AnalyticsRepository implements IAnalyticsRepository {
         return new Analytics(
             data.userId,
             data.alias,
+            data.topic,
             data.totalClicks,
             data.uniqueClicks,
             data.clicksByDate,

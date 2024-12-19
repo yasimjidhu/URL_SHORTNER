@@ -3,6 +3,7 @@ import { Schema, model, Document } from 'mongoose';
 export interface IAnalytics extends Document {
   userId:string;
   alias: string;
+  topic:string;
   totalClicks: number;
   uniqueClicks: number;
   clicksByDate: Array<{ date: string; count: number }>;
@@ -13,6 +14,7 @@ export interface IAnalytics extends Document {
 const AnalyticsSchema = new Schema<IAnalytics>({
   userId:{type:String,required:true},
   alias: { type: String, required: true },
+  topic:{type:String},
   totalClicks: { type: Number, required: true },
   uniqueClicks: { type: Number, required: true },
   clicksByDate: [

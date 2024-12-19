@@ -26,6 +26,7 @@ export class ShortenUrlUseCase {
     await this.analyticsService.create({
       userId,
       alias: customAlias || shortUrl.split("/").pop()!, 
+      topic,
       totalClicks: 1,
       uniqueClicks: 1,
       clicksByDate: [],
